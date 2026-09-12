@@ -1,2 +1,31 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ff5722 0%,
+    #d81b7e 50%,
+    #7c3aed 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.explore-btn {
+  background: linear-gradient(
+    90deg,
+    #F97316 0%,
+    #EC4899 100%
+  );
+
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}

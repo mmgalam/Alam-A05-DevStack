@@ -1,11 +1,13 @@
 import './App.css'
+import { Banner } from './Components/Banner/Banner'
+import Navbar from './Components/Navbar/Navbar'
 
 function App() {
 
   return (
     <>
-      <h2 className='text-5xl text-red-500'>Bismillah</h2>
-      <button className="btn">Default</button>
+      <Navbar></Navbar>
+      <Banner></Banner>
     </>
   )
 }
