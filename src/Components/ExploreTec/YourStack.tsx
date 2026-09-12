@@ -33,7 +33,6 @@ export function YourStack({
                 {selectedTech.length} Technology Selected
             </p>
 
-            {/* Empty Stack */}
             {selectedTech.length === 0 ? (
                 <p className="text-gray-400 mt-5 border-2 rounded text-center py-8">
                     Your Stack is Empty
