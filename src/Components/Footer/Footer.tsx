@@ -13,7 +13,7 @@ export default function Footer() {
         <footer className="container mx-auto my-10">
             <div className="grid grid-cols-12 gap-20 py-10 border-b-2 border-blue-100 justify-between">
                 <div className="col-span-5">
-                    <img src={FooterLogo} alt="FooterLogo" />
+                    <a href="#"><img src={FooterLogo} alt="FooterLogo" /></a>
                     <p className="py-4">Curated tools, technologies, and resources for developers building <br /> modern software.</p>
                     <button className="btn">GitHub</button>
                     <button className="btn">Twitter</button>

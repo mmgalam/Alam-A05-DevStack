@@ -15,7 +15,7 @@ export function TecCard({
   };
 
   return (
-    <div className="border-2 border-blue-100 p-6 rounded-2xl shadow-2xl">
+    <div className="border-2 border-blue-100 p-6 rounded-2xl shadow-xl">
       <div className="flex justify-between">
         <img src={technology.icon} alt={technology.name} className="w-12" />
 
