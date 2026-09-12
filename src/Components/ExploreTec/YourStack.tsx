@@ -1,0 +1,72 @@
+import { IoClose } from "react-icons/io5";
+import type { YourStackProps } from "../../Type/Technologies";
+
+export function YourStack({
+    selectedTech,
+    setSelectedTech
+}: YourStackProps) {
+
+    const handleRemove = (id: string) => {
+
+        const newStack = selectedTech.filter(
+            (technology) => technology.id !== id
+        );
+
+        setSelectedTech(newStack);
+    };
+
+    const handleRemoveAll = () => {
+        setSelectedTech([]);
+    };
+
+    return (
+        <div>
+
+            <h2>Your Stack</h2>
+
+            <p>
+                {selectedTech.length} Technology Selected
+            </p>
+
+            {selectedTech.map((technology) => (
+
+                <div
+                    key={technology.id}
+                    className="flex justify-between items-center border p-3 rounded-xl mb-2"
+                >
+
+                    <div className="flex items-center gap-3">
+
+                        <img
+                            src={technology.icon}
+                            alt={technology.name}
+                            className="w-10"
+                        />
+
+                        <div>
+                            <p>{technology.name}</p>
+                            <small>{technology.category}</small>
+                        </div>
+
+                    </div>
+
+                    <button
+                        onClick={() => handleRemove(technology.id)}
+                    >
+                        <IoClose />
+                    </button>
+
+                </div>
+
+            ))}
+
+            <button
+                onClick={handleRemoveAll}
+                className="w-full border border-red-400 text-red-500 py-2 rounded-xl mt-5"
+            >
+                Remove All
+            </button>
+
+        </div>
+    );
+}
