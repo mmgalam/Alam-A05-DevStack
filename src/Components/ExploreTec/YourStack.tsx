@@ -25,7 +25,7 @@ export function YourStack({
     return (
         <div>
 
-            <h2>Your Stack</h2>
+            <h2 className="text-2xl font-semibold">Your Stack</h2>
 
             <p>
                 {selectedTech.length} Technology Selected
@@ -47,13 +47,14 @@ export function YourStack({
                         />
 
                         <div>
-                            <p>{technology.name}</p>
+                            <p className="font-bold">{technology.name}</p>
                             <small>{technology.category}</small>
                         </div>
 
                     </div>
 
                     <button
+                        className="text-3xl"
                         onClick={() => handleRemove(technology.id)}
                     >
                         <IoClose />

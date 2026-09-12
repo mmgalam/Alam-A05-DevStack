@@ -16,13 +16,13 @@ export function ExploreTech({ technologiesPromise }:ExploreTecProps){
             <p>Pick one technology per category to build your ideal stack.</p>
             
             <div className="grid grid-cols-12 gap-10 py-8">
-                <div className="col-span-10">
+                <div className="col-span-9">
                     <Technologies 
                         technologiesPromise={technologiesPromise} selectedTech={selectedTech}
                         setSelectedTech={setSelectedTech}
                     ></Technologies>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-3">
                     <YourStack selectedTech={selectedTech}
                         setSelectedTech={setSelectedTech}></YourStack>
                 </div>

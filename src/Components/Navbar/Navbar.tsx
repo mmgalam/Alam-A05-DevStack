@@ -4,7 +4,7 @@ export default function Navbar() {
     
     return (
         <nav className='flex justify-between container mx-auto items-center my-2 py-3'>
-            <img src={Logo} alt="" />
+            <img src={Logo} alt="Logo" />
 
             <ul className='flex gap-4'>
                 <li className='text-orange-500'><a href="#">Home</a></li>

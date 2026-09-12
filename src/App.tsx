@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar'
 import { ExploreTech } from './Components/ExploreTec/ExploreTech';
 import type { Itechnology } from './Type/Technologies';
 import { Toaster } from 'react-hot-toast';
+import Footer from './Components/Footer/Footer';
 
 
 const technologiesFetch = async():Promise<Itechnology[]> =>{
@@ -20,12 +21,19 @@ function App() {
   const technologiesPromise = technologiesFetch();
   return (
     <>
+
       <Navbar></Navbar>
       <Banner></Banner>
       <Suspense fallback={<h2>Loading...</h2>}>
         <ExploreTech technologiesPromise={technologiesPromise}></ExploreTech>
       </Suspense>
-      <Toaster />
+      <Toaster position='bottom-right' toastOptions={{ style: {
+            fontSize: "22px",
+            padding: "16px 35px",
+            minWidth: "300px"
+          },
+      }} />
+      <Footer></Footer>
     </>
   )
 }
