@@ -48,4 +48,4 @@ The `key` helps React identify each item in a list. It helps React know which it
 ### 6. What is conditional rendering?
 
 Conditional rendering means showing something when a condition is true. For example, I show a message when the stack is empty.
-{stack.length === 0 ? <p>Your stack is empty.</p> : ""}
+{stack.length === 0 ? "Your stack is empty." : ""}
