@@ -1,5 +1,6 @@
 import { FaStar } from "react-icons/fa";
 import type { TechCardProps } from "../../../../Type/Technologies";
+import toast from "react-hot-toast";
 
 export function TecCard({
   technology,
@@ -10,6 +11,7 @@ export function TecCard({
 
   const handleAdd = () => {
     setSelectedTech([...selectedTech, technology]);
+    toast.success(`${technology.name} added succesfully!`);
   };
 
   return (

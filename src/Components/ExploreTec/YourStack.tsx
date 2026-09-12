@@ -1,5 +1,6 @@
 import { IoClose } from "react-icons/io5";
 import type { YourStackProps } from "../../Type/Technologies";
+import toast from "react-hot-toast";
 
 export function YourStack({
     selectedTech,
@@ -13,10 +14,12 @@ export function YourStack({
         );
 
         setSelectedTech(newStack);
+        toast.error(`Item removed!`);
     };
 
     const handleRemoveAll = () => {
         setSelectedTech([]);
+        toast.error(`Removed All`);
     };
 
     return (
